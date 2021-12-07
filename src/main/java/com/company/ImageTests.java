@@ -15,7 +15,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNull.notNullValue;
 
 public class ImageTests extends BaseTest {
-    private final String PATH_TO_IMAGE = "src/test/resources/1980x1320ru.jpg";
+    private final String PATH_TO_IMAGE = "src/test/resources/luca_02.jpeg";
     static String encodedFile;
     String uploadedImageId;
 
