@@ -49,6 +49,7 @@ public class NegativeTests extends BaseTest {
                 .getString("data.deletehash");
 
     }
+
     @DisplayName("Добавление в избранное негативная ")
     @Test
     void addToFavoriteImageTestNegative() {
