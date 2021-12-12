@@ -9,7 +9,6 @@ import static io.restassured.RestAssured.given;
 
 public class ImageDeleteTest extends BaseTest {
 
-
     private final String PATH_TO_IMAGE = "src/main/resources/1980x1320ru.jpg";
 String imageDeleteHash;
 @BeforeEach

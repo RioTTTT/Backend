@@ -53,7 +53,6 @@ public class ImageFavoriteTest extends BaseTest {
 
 
 
-
     private byte[] getFileContent() {
         byte[] byteArray = new byte[0];
         try {
