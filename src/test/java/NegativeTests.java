@@ -15,7 +15,6 @@ public class NegativeTests extends BaseTest {
     private String updateImageTest;
 
 
-
     @DisplayName("Загрузка файла негативная проверка")
     @Test
     void uploadImageTestNegative() {

@@ -73,7 +73,6 @@ public class ImageUploadTests extends BaseTest {
                 .statusCode(200);
     }
 
-
     private byte[] getFileContent() {
         byte[] byteArray = new byte[0];
         try {
