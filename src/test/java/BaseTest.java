@@ -1,6 +1,3 @@
-package com.company;
-
-
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
@@ -14,6 +11,7 @@ public abstract class BaseTest {
     static Properties properties = new Properties();
     static String token;
     static String username;
+    static String clientId;
 
     @BeforeAll
     static void beforeAll() {
@@ -22,6 +20,7 @@ public abstract class BaseTest {
         getProperties();
         token = properties.getProperty("token");
         username = properties.getProperty("username");
+        clientId = properties.getProperty("clientId");
     }
 
 
