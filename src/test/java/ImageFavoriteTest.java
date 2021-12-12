@@ -18,11 +18,7 @@ public class ImageFavoriteTest extends BaseTest {
     void beforeTest() {
         byte[] byteArray = getFileContent();
         encodedFile = Base64.getEncoder().encodeToString(byteArray);
-    }
 
-    @DisplayName("Загрузка файла в формате Base64")
-    @Test
-    void uploadBase64ImageTest() {
         imageHash = given()
                 .headers("Authorization", token)
                 .multiPart("image", encodedFile)
