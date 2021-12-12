@@ -9,11 +9,10 @@ import static org.hamcrest.CoreMatchers.is;
 
 public class NegativeTests extends BaseTest {
 
-    static String uploadedImageId;
+    static ValidatableResponse uploadedImageId;
     ValidatableResponse uploadedImage;
     String imageDeleteHash = "failed";
-    private String updateImageTest;
-
+    String updateImageTest = "somePath";
 
 
     @DisplayName("Загрузка файла негативная проверка")
@@ -25,7 +24,7 @@ public class NegativeTests extends BaseTest {
                 .expect()
                 .body("success", is(false))
                 .when()
-                .post("https://api.imgur.com/3/upload")
+                .post("https://api.imgur.com/3/image")
                 .then()
                 .statusCode(400);
 
@@ -34,20 +33,14 @@ public class NegativeTests extends BaseTest {
     @DisplayName("Проверка загруженного файла")
     @Test
     void chekUploadImageTestNegative() {
-        uploadedImageId = given()
+        given()
                 .headers("Authorization", token)
-                .multiPart("image", new File("src/main/resources/1980x1320ru.jpg"))
                 .expect()
-                .statusCode(200)
+                .body("success", is(false))
                 .when()
                 .get("https://api.imgur.com/3/upload/{updateImageTest}", updateImageTest)
-                .prettyPeek()
                 .then()
-                .extract()
-                .response()
-                .jsonPath()
-                .getString("data.deletehash");
-
+                .statusCode(400);
     }
 
     @DisplayName("Добавление в избранное негативная ")

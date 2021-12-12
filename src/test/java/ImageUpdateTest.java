@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -7,7 +8,7 @@ public class ImageUpdateTest extends BaseTest{
     private final String PATH_TO_IMAGE = "http://s2.fotokto.ru/photo/full/226/2262378.jpg";
     String updateImageTest;
     String uploadedImageId;
-
+@BeforeEach
     @DisplayName("Загрузка файла в формате JPG")
     @Test
     void uploadFileImageTest() {
@@ -27,7 +28,6 @@ public class ImageUpdateTest extends BaseTest{
 
 
     }
-
 
     @DisplayName("Обвновление заголовка и описания файла")
     @Test
