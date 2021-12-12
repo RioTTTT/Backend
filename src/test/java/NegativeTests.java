@@ -50,7 +50,6 @@ public class NegativeTests extends BaseTest {
 
     }
 
-
     @DisplayName("Добавление в избранное негативная ")
     @Test
     void addToFavoriteImageTestNegative() {

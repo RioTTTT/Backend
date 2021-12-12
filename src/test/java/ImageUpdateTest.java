@@ -29,7 +29,6 @@ public class ImageUpdateTest extends BaseTest{
     }
 
 
-
     @DisplayName("Обвновление заголовка и описания файла")
     @Test
     void updateImageTestPositive() {

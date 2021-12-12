@@ -14,8 +14,6 @@ public abstract class BaseTest {
     static String clientId;
 
 
-
-
     @BeforeAll
     static void beforeAll() {
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
