@@ -11,8 +11,9 @@ public class NegativeTests extends BaseTest {
 
     static ValidatableResponse uploadedImageId;
     ValidatableResponse uploadedImage;
-    String imageDeleteHash = "failed";
+    String imageDeleteHash = "someHash";
     String updateImageTest = "somePath";
+    private String imageHash = "someHash";
 
 
     @DisplayName("Загрузка файла негативная проверка")
@@ -49,7 +50,7 @@ public class NegativeTests extends BaseTest {
         given()
                 .headers("Authorization", token)
                 .when()
-                .post("https://api.imgur.com/3/uploaded")
+                .post("https://api.imgur.com/3/image/{deleteHash}/favorite",imageHash)
                 .prettyPeek()
                 .then()
                 .statusCode(404);
@@ -64,7 +65,7 @@ public class NegativeTests extends BaseTest {
                 .delete("https://api.imgur.com/3/image/{deleteHash}", imageDeleteHash)
                 .prettyPeek()
                 .then()
-                .statusCode(200);
+                .statusCode(403);
     }
 
 }
